@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    background-color: #0a0d14;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #0a0d14;
+    color: #ffffff;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    scrollbar-color: #1f2b47 #0a0d14;
+  }
+}
+
+@theme {
+  --color-white-bg: #0a0d14;
+  --color-white-surface: #111726;
+  --color-white-card: #161f33;
+  --color-white-border: #1f2b47;
+  --color-white-hover: #1a243b;
+
+  --color-dark-bg: #0a0d14;
+  --color-dark-surface: #111726;
+  --color-dark-card: #161f33;
+  --color-dark-border: #1f2b47;
+  --color-dark-hover: #1a243b;
+
+  --color-gray-100: #ffffff;
+  --color-gray-200: #f8fafc;
+  --color-gray-300: #f1f5f9;
+  --color-gray-400: #e2e8f0;
+  --color-gray-500: #cbd5e1;
+
+  --color-brand-violet: #7c3aed;
+  --color-brand-cyan: #06b6d4;
+  --color-brand-accent: #6366f1;
+  --color-brand-success: #10b981;
+  --color-brand-warning: #f59e0b;
+  --color-brand-danger: #ef4444;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0d14;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2b47;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Dark glassmorphism surfaces */
+.glass-panel {
+  background: rgba(17, 23, 38, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Violet accent */
+.glow-border {
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.15);
+}
+
+/* Cyan accent */
+.glow-cyan {
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.15);
+}
+
+/* Radar and chart tooltips */
+.recharts-default-tooltip {
+  background-color: #111726 !important;
+  border: 1px solid #1f2b47 !important;
+  border-radius: 8px !important;
+  color: #f8fafc !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5) !important;
+}
+
+.recharts-tooltip-label {
+  color: #94a3b8 !important;
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: #64748b;
+}
